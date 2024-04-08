@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    bootstrap-servers: 192.168.31.20:9094
+
+logging:
+  file:
+    name: logs/demo.log
+  level:
+    root: debug
+    
